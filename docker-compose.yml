@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    expose:
+      - "3001"
+    volumes:
+      - ./package/src:/usr/src/app/package/src
+      - ./package/node_modules:/usr/src/app/package/node_modules
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: "bridge"

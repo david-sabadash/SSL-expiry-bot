@@ -1,0 +1,39 @@
+{
+  "name": "ssl-cert-api",
+  "version": "1.0.0",
+  "description": "API layer containing the cron endpoint for updating the SSL cert document",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "test",
+    "build": "webpack --config webpack.config.js --mode=production"
+  },
+  "keywords": [
+    "SSL",
+    "certificate",
+    "bot",
+    "cron",
+    "api"
+  ],
+  "author": "Freshworks Studio",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "googleapis": "^100.0.0",
+    "moment": "^2.29.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "node-polyfill-webpack-plugin": "^1.1.4"
+  }
+}
